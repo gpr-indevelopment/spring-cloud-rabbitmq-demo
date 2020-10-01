@@ -1,12 +1,6 @@
 # spring-cloud-rabbitmq-demo
 Demo app with Spring Boot and RabbitMQ's messaging
 
-### RabbitMQ
-Start RabbitMQ server using docker:
-```
-$ docker run -d --name rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
-```
-
 ### Terminology
 From the [docs](https://www.rabbitmq.com/tutorials/amqp-concepts.html).
  
@@ -25,3 +19,19 @@ From the [docs](https://www.rabbitmq.com/tutorials/amqp-concepts.html).
 2. Publish and consume a string message from a Spring Boot app.
 3. Publish and consume a JSON message from a Spring Boot app. On this demo a serialized Person class was used.
 
+# Running the demo
+
+### RabbitMQ
+Start RabbitMQ server using docker:
+```
+$ docker run -d --name rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+```
+
+Start Spring Boot app from the project's root folder:
+```
+$ mvn spring-boot:run
+```
+
+Access RabbitMQ's dashboard on `localhost:15672`. On the exchanges tab there will be a rate of messages being published and written to both the person and string exchanges.
+
+![RabbitMQ dashboard](https://i.imgur.com/n1x7G2c.jpg)
