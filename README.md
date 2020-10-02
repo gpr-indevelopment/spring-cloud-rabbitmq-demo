@@ -18,7 +18,7 @@ From the [docs](https://www.rabbitmq.com/tutorials/amqp-concepts.html).
 1. Get started with Spring Boot and RabbitMQ integration.
 2. Publish and consume a string message from a Spring Boot app.
 3. Publish and consume a JSON message from a Spring Boot app. On this demo a serialized Person class was used.
-4. Make a synchronous RPC to a server through the message broker and wait for the response.
+4. Make a synchronous RPC to a server through the message broker and wait for the response. Used this [documentation](https://www.rabbitmq.com/tutorials/tutorial-six-spring-amqp.html) as reference.
 
 # Running the demo
 
